@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="hours"></span>
+    <span>:</span>
+     <span id="minutes"></span>
+<span>:</span>
+    <span id="seconds"></span>
+    <span id="day"></span>
+<!-- <span id="day">PM</span> -->
+    
+    <!-- <h1 id="hours">00</h1>
+    <h1>:</h1>
+    <h1 id="minutes">00</h1>
+    <h1>:</h1>
+    <h1 id="seconds">00</h1>
+    <h1>16:34:45</h1> -->
+    <script>
+        function Time(){
+        let clock = new Date()
+       let hr= clock.getHours()
+       let hrs = clock.getHours()
+       let min= clock.getMinutes()
+       let sec= clock.getSeconds()
+
+       let hours = document.querySelector('#hours')
+       let hourse = document.querySelector('#day')
+       if(hrs>12)
+       hourse.innerHTML="PM"
+       else 
+       hourse.innerHTML = "AM"
+
+       if(hr>12)
+       hr=hr-12
+       if(hr<10)
+       hr = "0"+hr
+       hours.innerHTML = hr
+       if(hr>12)
+       hour.innerHTML = "PM"
+
+       let minuts=document.querySelector('#minutes')
+       if(min<10)
+       min = "0"+min
+       minuts.innerHTML = min
+
+       let hour=document.querySelector('#seconds')
+       if(sec<10)
+       sec = "0"+sec
+       hour.innerHTML=sec
+        }
+        setInterval(Time,1000)
+
+
+
+
+    </script>
+</body>
+</html>
